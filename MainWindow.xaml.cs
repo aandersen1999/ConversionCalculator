@@ -57,9 +57,7 @@ namespace ConversionCalc
 
         private void OnConversionTypeUpdate(object sender, SelectionChangedEventArgs e)
         {
-            ComboBox temp = sender as ComboBox;
-
-            if (temp != null)
+            if (sender is ComboBox temp)
             {
                 Input1.Units.ItemsSource = Units.Instance.GetCollection(temp.SelectedIndex);
                 Input2.Units.ItemsSource = Units.Instance.GetCollection(temp.SelectedIndex);
